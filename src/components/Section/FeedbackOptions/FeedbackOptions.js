@@ -1,18 +1,21 @@
+import { FeedbackList,
+         FeedbackBtn } from "./FeedbackOptions.styled"
+
 export const FeedbackOptions = ({options, onLeaveFeedback}) => {
 return (
-    <ul>
+    <FeedbackList>
         {options.map(option => {
             return (
                 <li key={option}>
-                    <button
+                    <FeedbackBtn
                      type="button"
                      onClick={() => onLeaveFeedback(option)}
                      >
                     {option}
-                    </button>
+                    </FeedbackBtn>
                 </li>
             )
         })}
-    </ul>
+    </FeedbackList>
 )
 }
